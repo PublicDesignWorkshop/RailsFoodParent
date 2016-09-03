@@ -1,5 +1,6 @@
 class Tree < ActiveRecord::Base
   has_one :food
+  has_many :adoptions
   has_many :people, through: :adoptions
   has_many :notes
   has_many :donations
