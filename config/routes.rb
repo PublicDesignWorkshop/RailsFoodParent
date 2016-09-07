@@ -10,6 +10,47 @@ Rails.application.routes.draw do
       resources :trees
     end
   end
+
+
+  # --- DONATIONS ---
+  # get single donation by location
+  # get all donations from list of locations
+  # get single donation from tree
+  # get all donations from multiple trees
+  # change donation
+  # create donation
+  # delete donation
+  # -----------------
+
+  # --- LOCATIONS (should be done )---
+  # create location
+  # change location
+  # delete location
+  # get all locations
+  # -----------------
+
+  # --- NOTES ---
+  # CRUD
+  # get all notes from a particular tree
+  # get all notes from a particular person
+  # -----------------
+
+  # --- TREES ---
+  # CRUD
+  # get all trees (either specific ones or seasonal ones, adopted/unadopted, etc -- filter function)
+  # get a specific parent's trees?
+  # -----------------
+
+  # --- FOODS (mostly done)---
+  # UPDATE food only (unused?)
+  # GET all foods
+  # -----------------
+
+  # --- PERSONS ---
+  # CRU (no D)
+  # GET all people
+  # -----------------
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -9,11 +9,11 @@ class User < ActiveRecord::Base
   TOKEN_DURATION = 6.months
 
   def is_admin?
-    self.role === :admin
+    self.role === 'admin'
   end
 
   def is_manager?
-    self.role === :manager
+    self.role === 'manager'
   end
 
   def is_privileged?

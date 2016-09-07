@@ -71,7 +71,7 @@ module Api
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.fetch(:note, {})
+      params.fetch(:note, {}).permit(:id,:type,:tree,:person,:comment,:picture,:rating,:amount,:timing)
     end
 end
   end
