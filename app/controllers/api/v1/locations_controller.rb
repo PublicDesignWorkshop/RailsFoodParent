@@ -1,4 +1,6 @@
-class LocationsController < ApplicationController
+module Api
+  module V1
+    class LocationsController < V1Controller
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
   # GET /locations
@@ -71,4 +73,6 @@ class LocationsController < ApplicationController
     def location_params
       params.fetch(:location, {})
     end
+end
+  end
 end

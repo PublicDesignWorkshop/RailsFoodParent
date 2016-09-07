@@ -7,7 +7,7 @@ class CreateTrees < ActiveRecord::Migration
       t.string :address
       t.boolean :public
       t.boolean :dead
-      t.boolean :rating
+      t.integer :rating
       t.timestamps null: false
     end
   end

@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  resources :adoptions
-  resources :people
-  resources :locations
-  resources :foods
-  resources :notes
-  resources :donations
-  resources :trees
+  namespace :api do
+    namespace :v1 do
+      resources :adoptions
+      resources :people
+      resources :locations
+      resources :foods
+      resources :notes
+      resources :donations
+      resources :trees
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

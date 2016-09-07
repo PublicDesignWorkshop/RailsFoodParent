@@ -1,4 +1,6 @@
-class NotesController < ApplicationController
+module Api
+  module V1
+    class NotesController < V1Controller
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   # GET /notes
@@ -71,4 +73,6 @@ class NotesController < ApplicationController
     def note_params
       params.fetch(:note, {})
     end
+end
+  end
 end
