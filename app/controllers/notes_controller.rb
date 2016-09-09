@@ -1,6 +1,5 @@
-module Api
-  module V1
-    class NotesController < V1Controller
+
+class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   # GET /notes
@@ -71,8 +70,6 @@ module Api
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.fetch(:note, {}).permit(:id,:type,:tree,:person,:comment,:picture,:rating,:amount,:timing)
+      params.fetch(:note, {}).permit(:id,:type,:tree,:user,:comment,:picture,:rating,:amount,:timing)
     end
-end
-  end
 end

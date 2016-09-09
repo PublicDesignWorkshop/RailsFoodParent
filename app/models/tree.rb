@@ -7,7 +7,7 @@ class Tree < ActiveRecord::Base
   has_many :locations, through: :donations
 
   scope :public_trees, lambda { where("public = true") }
-  scope :alive, lambda { where("dead = 0") }
+  scope :alive, lambda { where("dead = false") }
   scope :not_farm, lambda { where('id > -1') }
   scope :adopted, lambda { joins(:adoptions) }
   scope :in_season, lambda { where(:food_id => Food.pickable.in_season) }
