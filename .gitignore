@@ -15,3 +15,5 @@
 /log/*
 !/log/.keep
 /tmp
+
+db/migrate/20160920190221_add_test_data.rb
