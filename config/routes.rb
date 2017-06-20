@@ -1,38 +1,34 @@
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      resources :adoptions
-      resources :people
-      resources :locations
-      resources :foods
-      resources :notes
-      resources :donations
-      resources :trees
-    end
-  end
+    resources :adoptions
+    resources :users
+    resources :locations
+    resources :foods
+    resources :notes
+    resources :donations
+    resources :trees
 
 
   # --- DONATIONS ---
-  # get single donation by location
-  # get all donations from list of locations
-  # get single donation from tree
+  # get single donation by location -> GET /api/v1/locations/4/last_donation ?
+  # get all donations from list of locations -> GET /api/v1/locations?loc_id=[4,5,6]
+  # get single donation from tree -> GET /api/v1/trees/45/donations
   # get all donations from multiple trees
-  # change donation
-  # create donation
-  # delete donation
+  # change donation -> UPDATE /api/v1/donations/56
+  # create donation -> POST /api/v1/donations
+  # delete donation -> DELETE /api/v1/donations/4
   # -----------------
 
   # --- LOCATIONS (should be done )---
-  # create location
-  # change location
-  # delete location
-  # get all locations
+  # create location -> POST /api/v1/locations
+  # change location -> UPDATE /api/v1/locations/3
+  # delete location -> DELETE ...
+  # get all locations -> GET /api/v1/locations
   # -----------------
 
   # --- NOTES ---
   # CRUD
   # get all notes from a particular tree
-  # get all notes from a particular person
+  # get all notes from a particular user
   # -----------------
 
   # --- TREES ---
@@ -48,7 +44,7 @@ Rails.application.routes.draw do
 
   # --- PERSONS ---
   # CRU (no D)
-  # GET all people
+  # GET all users
   # -----------------
 
   # The priority is based upon order of creation: first created -> highest priority.
